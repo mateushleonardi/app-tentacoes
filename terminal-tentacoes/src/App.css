@@ -51,6 +51,8 @@ button {
   font-family: inherit;
 }
 
+
+
 select:focus,
 .terminal-input:focus {
   outline: none;
@@ -58,15 +60,31 @@ select:focus,
 }
 
 button {
-  background-color: #39ff14;
   color: #000;
   font-weight: bold;
   cursor: pointer;
   border: none;
-  box-shadow: 0 0 10px #39ff14;
 }
 
-button:hover {
+.btn-select{
+  background-color: #39ff14;
+  box-shadow: 0 0 10px #39ff14;
+
+}
+
+.btn-fechar{
+  background-color: #ff2a2a;
+  box-shadow: 0 0 10px #ff1414;
+  color: white;
+
+}
+
+.btn-fechar:hover{
+  background-color: #ff2a2a;
+  box-shadow: 0 0 12px #ff1414;
+}
+
+.btn-select:hover {
   background-color: #2fdd12;
   box-shadow: 0 0 12px #39ff14;
 }
@@ -96,3 +114,13 @@ button:hover {
     width: 100%;
   }
 }
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
