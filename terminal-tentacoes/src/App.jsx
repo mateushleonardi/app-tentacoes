@@ -10,6 +10,7 @@ export default function TerminalTentacoes() {
   const [mostrarSalmo, setMostrarSalmo] = useState(false);
   const [mostrarConfissao, setMostrarConfissao] = useState(false);
   const [mostrarModal, setMostrarModal] = useState(false);
+  
 
 
   const executarComando = (e) => {
@@ -31,15 +32,32 @@ export default function TerminalTentacoes() {
       setResposta("🔊 CONFISSÃO\n\nVocê está prestes a ouvir algo que nunca foi revelado.");
       setMostrarConfissao(true);
     } else if (input === '+') {
-      setResposta(`🌐 PRÉ-VENDA
-
-🔹 Preview: [imagem futuramente]
-🗓️ Data: 28/04
-📍 Local: Curitiba, PR
-🧢 Pré-venda: R$ 59,90
-
-📸 Instagram: @eumatt041
-🎧 Spotify / YouTube: linktr.ee/eumatt`);
+      setResposta(`
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; font-family: sans-serif;">
+          <div style="flex: 1 1 300px; border: 2px solid #444; border-radius: 12px; padding: 16px; background-color: #111; color: #fff; max-width: 500px;">
+            <img src="/public/camisa-frente.jpeg" alt="Camiseta EuMatt" 
+            onMouseOver="this.src='/public/camisa-traz.jpeg'" 
+            onMouseOut="this.src='/public/camisa-frente.jpeg'" 
+            style="width: 100%; border-radius: 8px; margin-bottom: 12px;" />
+            <h2 style="margin: 0 0 8px 0;">🌐 PRÉ-VENDA: Camiseta EuMatt Modelo Oversized</h2>
+            <p style="margin: 4px 0;"><strong>🗓️ Data de lançamento:</strong> 03/05</p>
+            <p style="margin: 4px 0;"><strong>📍 Endereço:</strong> Curitiba, PR</p>
+            <p style="margin: 4px 0;"><strong>🧢 Valor:</strong> R$ 149,90</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3StzeFiXeajWZCwNOkykoaBqsebF35aabcdVTGsyjDjobTg/viewform?usp=dialog" target="_blank" style="display: inline-block; margin-top: 10px; padding: 8px 12px; background: #0f0; color: #000; font-weight: bold; text-decoration: none; border-radius: 6px;">🛒 Garantir com desconto</a>
+          </div>
+          <div style="flex: 1 1 300px; border: 2px solid #444; border-radius: 12px; padding: 16px; background-color: #111; color: #fff; max-width: 500px;">
+            <img src="/public/camisa-frente.jpeg" alt="Camiseta EuMatt - Modelo 2" 
+            onMouseOver="this.src='/public/camisa-traz.jpeg'" 
+            onMouseOut="this.src='/public/camisa-frente.jpeg'" 
+            style="width: 100%; border-radius: 8px; margin-bottom: 12px;" />
+            <h2 style="margin: 0 0 8px 0;">🌐 PRÉ-VENDA: Camiseta EuMatt Modelo Basic </h2>
+            <p style="margin: 4px 0;"><strong>🗓️ Data de lançamento:</strong> 03/05</p>
+            <p style="margin: 4px 0;"><strong>📍 Endereço:</strong> Curitiba, PR</p>
+            <p style="margin: 4px 0;"><strong>🧢 Valor:</strong> R$ 89,90</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3StzeFiXeajWZCwNOkykoaBqsebF35aabcdVTGsyjDjobTg/viewform?usp=dialog" target="_blank" style="display: inline-block; margin-top: 10px; padding: 8px 12px; background: #0f0; color: #000; font-weight: bold; text-decoration: none; border-radius: 6px;">🛒 Garantir com desconto</a>
+          </div>
+        </div>
+      `);      
     } else if (input === 'heroína') {
       setResposta('CUIDADO. Você já caiu em tentação hoje...');
     }
@@ -70,14 +88,16 @@ export default function TerminalTentacoes() {
               Selecionar
           </button>
         </form>
-        <div className="mt-6 text-green-300 min-h-[80px] text-lg border-t border-green-600 pt-4 whitespace-pre-line">
-          {resposta}
-        </div>
+        <div
+          className="mt-6 text-green-300 min-h-[80px] text-lg border-t border-green-600 pt-4"
+          dangerouslySetInnerHTML={{ __html: resposta }}
+        />
+
 
         {/* Renderização condicional fora do select */}
         {mostrarSalmo && !assistiuSalmo && (
           <video controls onEnded={() => setAssistiuSalmo(true)} className="mt-4 rounded shadow-md w-full">
-            <source src="/salmo.mp4" type="video/mp4" />
+            <source src="/salmo.MOV" type="video/mp4" />
             Seu navegador não suporta vídeo.
           </video>
         )}
