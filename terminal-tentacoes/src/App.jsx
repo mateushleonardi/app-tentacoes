@@ -116,16 +116,35 @@ export default function TerminalTentacoes() {
 
         {/* Renderização condicional fora do select */}
         {mostrarSalmo && !assistiuSalmo && (
-          <video controls onEnded={() => setAssistiuSalmo(true)} className="mt-4 rounded shadow-md w-full">
-            <source src="/salmo.MOV" type="video/mp4" />
-            Seu navegador não suporta vídeo.
-          </video>
+ <video
+ controls
+ playsInline
+ onEnded={() => setAssistiuSalmo(true)}
+ className="mt-4 w-full rounded-lg shadow-lg"
+ style={{
+   width: '100%',
+   height: 'auto',
+   maxHeight: '420px',
+   backgroundColor: '#000',
+   display: 'block',
+   margin: '0 auto',
+ }}
+>
+ <source src="/salmo.mp4" type="video/mp4" />
+ Seu navegador não suporta vídeo.
+</video>
+
+
         )}
 
         {mostrarConfissao && !ouviuConfissao && (
-          <audio controls onEnded={() => setOuviuConfissao(true)} className="mt-4 w-full">
-            <source src="/confissao.mp3" type="audio/mpeg" />
-            Seu navegador não suporta áudio.
+          <audio
+          controls
+          onEnded={() => setOuviuConfissao(true)}
+          className="mt-4 w-full max-w-full"
+          >
+          <source src="/confissao.mp3" type="audio/mpeg" />
+          Seu navegador não suporta áudio.
           </audio>
         )}
       </div>
