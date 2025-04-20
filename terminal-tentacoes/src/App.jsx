@@ -34,30 +34,50 @@ export default function TerminalTentacoes() {
     } else if (input === '+') {
       setResposta(`
         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; font-family: sans-serif;">
-          <div style="flex: 1 1 300px; border: 2px solid #444; border-radius: 12px; padding: 16px; background-color: #111; color: #fff; max-width: 500px;">
-            <img src="/camisa-frente.jpeg" alt="Camiseta EuMatt" 
-            onMouseOver="this.src='/camisa-traz.jpeg'" 
-            onMouseOut="this.src='/camisa-frente.jpeg'" 
-            style="width: 100%; border-radius: 8px; margin-bottom: 12px;" />
-            <h2 style="margin: 0 0 8px 0;">🌐 PRÉ-VENDA: Camiseta EuMatt Modelo Oversized</h2>
-            <p style="margin: 4px 0;"><strong>🗓️ Data de lançamento:</strong> 03/05</p>
-            <p style="margin: 4px 0;"><strong>📍 Endereço:</strong> Curitiba, PR</p>
-            <p style="margin: 4px 0;"><strong>🧢 Valor:</strong> R$ 149,90</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3StzeFiXeajWZCwNOkykoaBqsebF35aabcdVTGsyjDjobTg/viewform?usp=dialog" target="_blank" style="display: inline-block; margin-top: 10px; padding: 8px 12px; background: #0f0; color: #000; font-weight: bold; text-decoration: none; border-radius: 6px;">🛒 Garantir com desconto</a>
+          <div style="flex: 1 1 300px; padding: 8px; box-sizing: border-box; min-width: 280px;">
+            <div style="border: 2px solid #444; border-radius: 12px; padding: 16px; background-color: #111; color: #fff;">
+              <img 
+                src="/camisa-frente.jpeg" 
+                alt="Camiseta EuMatt" 
+                onmouseover="this.src='/camisa-traz.jpeg'" 
+                onmouseout="this.src='/camisa-frente.jpeg'" 
+                style="width: 100%; border-radius: 8px; margin-bottom: 12px;" 
+              />
+              <h2 style="margin: 0 0 8px 0;">🌐 PRÉ-VENDA: Camiseta EuMatt Modelo Oversized</h2>
+              <p style="margin: 4px 0;"><strong>🗓️ Data de lançamento:</strong> 03/05</p>
+              <p style="margin: 4px 0;"><strong>📍 Endereço:</strong> Curitiba, PR</p>
+              <p style="margin: 4px 0;"><strong>🧢 Valor:</strong> R$ 149,90</p>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3StzeFiXeajWZCwNOkykoaBqsebF35aabcdVTGsyjDjobTg/viewform?usp=dialog" 
+                target="_blank" 
+                style="display: inline-block; margin-top: 10px; padding: 8px 12px; background: #0f0; color: #000; font-weight: bold; text-decoration: none; border-radius: 6px;">
+                🛒 Garantir com desconto
+              </a>
+            </div>
           </div>
-          <div style="flex: 1 1 300px; border: 2px solid #444; border-radius: 12px; padding: 16px; background-color: #111; color: #fff; max-width: 500px;">
-            <img src="/camisa-frente.jpeg" alt="Camiseta EuMatt - Modelo 2" 
-            onMouseOver="this.src='/camisa-traz.jpeg'" 
-            onMouseOut="this.src='/camisa-frente.jpeg'" 
-            style="width: 100%; border-radius: 8px; margin-bottom: 12px;" />
-            <h2 style="margin: 0 0 8px 0;">🌐 PRÉ-VENDA: Camiseta EuMatt Modelo Basic </h2>
-            <p style="margin: 4px 0;"><strong>🗓️ Data de lançamento:</strong> 03/05</p>
-            <p style="margin: 4px 0;"><strong>📍 Endereço:</strong> Curitiba, PR</p>
-            <p style="margin: 4px 0;"><strong>🧢 Valor:</strong> R$ 89,90</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3StzeFiXeajWZCwNOkykoaBqsebF35aabcdVTGsyjDjobTg/viewform?usp=dialog" target="_blank" style="display: inline-block; margin-top: 10px; padding: 8px 12px; background: #0f0; color: #000; font-weight: bold; text-decoration: none; border-radius: 6px;">🛒 Garantir com desconto</a>
+      
+        <div style="flex: 1 1 300px; padding: 8px; box-sizing: border-box; min-width: 280px;">
+            <div style="border: 2px solid #444; border-radius: 12px; padding: 16px; background-color: #111; color: #fff;">
+              <img 
+                src="/camisa-frente.jpeg" 
+                alt="Camiseta EuMatt - Modelo 2" 
+                onmouseover="this.src='/camisa-traz.jpeg'" 
+                onmouseout="this.src='/camisa-frente.jpeg'" 
+                style="width: 100%; border-radius: 8px; margin-bottom: 12px;" 
+              />
+              <h2 style="margin: 0 0 8px 0;">🌐 PRÉ-VENDA: Camiseta EuMatt Modelo Basic</h2>
+              <p style="margin: 4px 0;"><strong>🗓️ Data de lançamento:</strong> 03/05</p>
+              <p style="margin: 4px 0;"><strong>📍 Endereço:</strong> Curitiba, PR</p>
+              <p style="margin: 4px 0;"><strong>🧢 Valor:</strong> R$ 89,90</p>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3StzeFiXeajWZCwNOkykoaBqsebF35aabcdVTGsyjDjobTg/viewform?usp=dialog" 
+                target="_blank" 
+                style="display: inline-block; margin-top: 10px; padding: 8px 12px; background: #0f0; color: #000; font-weight: bold; text-decoration: none; border-radius: 6px;">
+                🛒 Garantir com desconto
+              </a>
+            </div>
           </div>
         </div>
-      `);      
+      `);
+      
     } else if (input === 'heroína') {
       setResposta('CUIDADO. Você já caiu em tentação hoje...');
     }
